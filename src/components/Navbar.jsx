@@ -27,13 +27,13 @@ const Icon = styled(Box)(({ theme }) => ({
   display: "none",
   alignItems: "center",
   gap: "20px",
-  // only show up if it is bigger than small
+  //   only show up if it is bigger than small
   [theme.breakpoints.up("sm")]: {
     display: "flex",
   },
 }));
 
-//* for small screen more than 600px
+//* for small screen less than 600px
 const SmallScreen = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -66,15 +66,15 @@ const Navbar = () => {
             alt="Salamn"
             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
           />
-          <SmallScreen>
-            <Avatar
-              sx={{ width: 30, height: 30 }}
-              alt="Salamn"
-              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
-            />
-            <Typography variant="span">Salman</Typography>
-          </SmallScreen>
         </Icon>
+        <SmallScreen>
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            alt="Salamn"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+          />
+          <Typography variant="span">Salman</Typography>
+        </SmallScreen>
       </ToolbarStyled>
     </AppBar>
   );
