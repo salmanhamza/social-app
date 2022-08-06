@@ -5,11 +5,13 @@ import {
   Badge,
   Box,
   InputBase,
+  Menu,
+  MenuItem,
   styled,
   Toolbar,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 const ToolbarStyled = styled(Toolbar)({
   display: "flex",
@@ -44,6 +46,8 @@ const SmallScreen = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="sticky">
       <ToolbarStyled>
@@ -65,9 +69,10 @@ const Navbar = () => {
             sx={{ width: 30, height: 30 }}
             alt="Salamn"
             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg"
+            onClick={(e) => setOpen(true)}
           />
         </Icon>
-        <SmallScreen>
+        <SmallScreen onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
             alt="Salamn"
@@ -76,6 +81,24 @@ const Navbar = () => {
           <Typography variant="span">Salman</Typography>
         </SmallScreen>
       </ToolbarStyled>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
