@@ -84,24 +84,6 @@ const Rightbar = () => {
               alt="Breakfast"
             />
           </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c"
-              alt="Breakfast"
-            />
-          </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://images.unsplash.com/photo-1533827432537-70133748f5c8"
-              alt="Breakfast"
-            />
-          </ImageListItem>
-          <ImageListItem>
-            <img
-              src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62"
-              alt="Breakfast"
-            />
-          </ImageListItem>
         </ImageList>
         <Typography variant="h6" fontWeight={300} mt={2}>
           Latest Conversations
